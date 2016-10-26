@@ -11,9 +11,9 @@
 <body>
     <div id="title">Google Search Volume by Language</div>
     <div id="container"></div>
-    <script type="text/javascript" src="./globe/third-party/Detector.js"></script>
-    <script type="text/javascript" src="./globe/third-party/three.min.js"></script>
-    <script type="text/javascript" src="./globe/globe.js"></script>
+    <script type="text/javascript" src="/globe/third-party/Detector.js"></script>
+    <script type="text/javascript" src="/globe/third-party/three.min.js"></script>
+    <script type="text/javascript" src="/globe/globe.js"></script>
     <script type="text/javascript">
         // Where to put the globe?
         var container = document.getElementById( 'container' );
@@ -25,7 +25,7 @@
         var xhr = new XMLHttpRequest();
 
         // Where do we get the data?
-        xhr.open( 'GET', 'https://github.com/dataarts/webgl-globe/blob/master/globe-search/search.json', true );
+        xhr.open( 'GET', 'search.json', true );
 
         // What do we do when we have it?
         xhr.onreadystatechange = function() {
