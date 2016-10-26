@@ -5,6 +5,7 @@
     <style type="text/css">
         body {
             background: #000000;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -36,6 +37,8 @@
                 window.alert("Received the data.")
                 // Parse the JSON
                 var data = JSON.parse( xhr.responseText );
+                
+                window.alert(data.length);
 
                 // Tell the globe about your JSON data
                 for ( var i = 0; i < data.length; i ++ ) {
