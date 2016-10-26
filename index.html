@@ -28,6 +28,7 @@
             // If we've received the data
             if ( xhr.readyState === 4 && xhr.status === 200 ) {
 
+                window.alert("Received the data.")
                 // Parse the JSON
                 var data = JSON.parse( xhr.responseText );
 
