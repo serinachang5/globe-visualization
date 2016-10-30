@@ -102,6 +102,7 @@
       if (xhr.status === 200) {
         var data = JSON.parse(xhr.responseText);
         window.data = data;
+        window.alert(data.length);
         globe.addData(data, {format: 'legend'});
         globe.createPoints();
         globe.animate();
