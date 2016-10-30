@@ -76,7 +76,7 @@ def main():
     check(jsondata)
 
     with open("mysearch.json","w") as outfile:
-        json.dump([best_col, jsondata], outfile)
+        json.dump([[best_col, jsondata]], outfile)
         outfile.close()
 
 main()
