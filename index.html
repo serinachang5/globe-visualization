@@ -46,6 +46,15 @@
       font: 20px/20px Georgia;
       padding: 15px;
     }
+    #subtitle {
+      position: absolute;
+      top: 40px;
+      width: 320px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+      font: 20px/20px Georgia;
+      padding: 15px;
+    }
 
     #ce span {
       display: none;
@@ -73,7 +82,11 @@
 </div>
 
 <div id="title">
-  Google Search Volume by Language
+  Prevalence of physical violence against women
+</div>
+    
+<div id="subtitle">
+    Percentage of women affected in their lifetimes
 </div>
 
 <a id="ce" href="http://www.chromeexperiments.com/globe">
@@ -102,7 +115,6 @@
       if (xhr.status === 200) {
         // Parse the JSON
         var data = JSON.parse( xhr.responseText );
-        window.alert(data.length);
 
         // Tell the globe about your JSON data
         for ( var i = 0; i < data.length; i ++ ) {
@@ -113,9 +125,6 @@
         globe.createPoints();
 
         // Begin animation
-        globe.animate();
-        globe.addData(data, {format: 'legend'});
-        globe.createPoints();
         globe.animate();
         document.body.style.backgroundImage = 'none'; // remove loading
       }
